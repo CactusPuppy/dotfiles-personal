@@ -87,10 +87,6 @@
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
 
-[user]
-	email = puppycactus@gmail.com
-	name = CactusPuppy
-	signingkey = 4B33B0A3E15E2C82
 [core]
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
 	# [default] trailing-space: looks for spaces at the end of a line
@@ -136,3 +132,10 @@
 [gpg]
 
 	program = gpg
+
+[push]
+
+	# https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault
+	default = simple
+	# Make `git push` push relevant annotated tags when pushing branches out.
+	followTags = true
