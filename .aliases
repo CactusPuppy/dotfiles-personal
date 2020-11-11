@@ -51,3 +51,6 @@ alias pumpitup="osascript -e 'set volume output volume 100'"
 
 # Get week number
 alias week='date +%V'
+
+# Make piping to Windows clipboard easier
+alias clip=clip.exe

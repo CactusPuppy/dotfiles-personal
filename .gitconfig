@@ -88,8 +88,9 @@
 	whitespace = fix
 
 [user]
-	email = CactusPuppy@users.noreply.github.com
+	email = puppycactus@gmail.com
 	name = CactusPuppy
+	signingkey = 4B33B0A3E15E2C82
 [core]
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
 	# [default] trailing-space: looks for spaces at the end of a line
@@ -126,3 +127,12 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+
+[commit]
+
+	# https://help.github.com/articles/signing-commits-using-gpg/
+	gpgsign = true
+
+[gpg]
+
+	program = gpg
