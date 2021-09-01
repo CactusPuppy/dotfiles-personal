@@ -19,11 +19,6 @@ shopt -s histappend;
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
 
-# Enable tab completion for `g` by marking it as an alias for `git`
-if type _git &> /dev/null; then
-	complete -o default -o nospace -F _git g;
-fi;
-
 # Load Homebrew
 [[ -s /home/linuxbrew/.linuxbrew/bin/brew ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)";
 
@@ -35,5 +30,8 @@ if which brew &> /dev/null && [ -r "$(brew --prefix)/etc/profile.d/bash_completi
 elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
+
+# Enable tab completion for `g` by marking it as an alias for `git`
+test -f ~/git-completion.bash && source $_ && __git_complete g __git_main
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
