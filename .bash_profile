@@ -25,7 +25,7 @@ if type _git &> /dev/null; then
 fi;
 
 # Load Homebrew
-if which brew &> /dev/null; then eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"; fi;
+[[ -s /home/linuxbrew/.linuxbrew/bin/brew ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)";
 
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]; then
