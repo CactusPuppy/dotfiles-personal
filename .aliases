@@ -7,11 +7,7 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 #Personal shortcuts
-alias d="cd /d/"
-alias p="cd /d/GitHub"
-alias w="cd /d/GitHub/OverwatchWorkshop"
-alias doc="cd /d/Documents"
-alias bs="cd /d/BideoStuff"
+alias p="cd ~/projects"
 alias g="git"
 
 # Print each PATH entry on a separate line
