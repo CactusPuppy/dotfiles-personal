@@ -10,8 +10,6 @@ for file in ~/.{aliases,functions,exports,bash_prompt,binds,extra}; do
 done;
 
 # Enable tab completion for `g` by marking it as an alias for `git`
-if type _git &> /dev/null; then
-	complete -o default -o nospace -F _git g;
-fi;
+test -f ~/git-completion.bash && source $_ && __git_complete g __git_main
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
