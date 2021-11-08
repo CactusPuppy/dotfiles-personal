@@ -139,3 +139,8 @@
 	default = simple
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
+	
+[init]
+
+	# Change the default branch name
+	defaultBranch = main
