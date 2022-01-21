@@ -5,7 +5,7 @@
 export PATH="$PATH:$HOME/bin";
 
 # Load shell dotfiles, and then some:
-for file in ~/.{aliases,functions,exports,bash_prompt,binds,extra}; do
+for file in ~/.{aliases,functions,exports,binds,extra}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;

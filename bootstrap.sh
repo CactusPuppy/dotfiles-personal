@@ -11,7 +11,9 @@ function doIt() {
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
+		--exclude "synth-shell/" \
 		-avh --no-perms . ~;
+	chmod +x synth-shell/setup.sh && synth-shell/setup.sh;
 	source ~/.bash_profile;
 }
 
