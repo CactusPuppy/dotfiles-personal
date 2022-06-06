@@ -54,3 +54,6 @@ alias clip=clip.exe
 
 # Alias Bundler executions
 alias be='bundle exec'
+
+# Re-run previous command with sudo
+alias doit='sudo $(history -p !!)'
