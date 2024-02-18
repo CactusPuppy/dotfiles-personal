@@ -82,6 +82,9 @@
 	# Show the user email for the current repository.
 	whoami = config user.email
 
+	# Add uncommitted changes by parts
+	ap = add -p
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
