@@ -3,8 +3,12 @@
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
 
+	bb = !~/better-git-branch.sh
 	# View the current working tree status using the short format
 	s = status -s
+
+	# Stash all
+	sa = stash --all
 
 	# Show the diff between the latest commit and the current state
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
@@ -23,6 +27,9 @@
 
 	# Commit all changes
 	ca = !git add -A && git commit -av
+
+	# Commit with message
+	cm = commit -m
 
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
@@ -99,7 +106,7 @@
 	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
 	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 	
-	autocrlf = true
+	# autocrlf = true
 	
 	# Speed up commands involving untracked files such as `git status`.
 	# https://git-scm.com/docs/git-update-index#_untracked_cache
