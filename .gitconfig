@@ -28,6 +28,12 @@
 	# Commit all changes
 	ca = !git add -A && git commit -av
 
+	# Stash all changes
+	sa = stash -u
+
+	# Stash unstaged changes
+	sku = stash -k -u
+
 	# Commit with message
 	cm = commit -m
 
